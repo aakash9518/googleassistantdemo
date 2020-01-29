@@ -28,22 +28,22 @@ app.intent('Give me my Internals Report', async (conv) => {
 
 
 
-  );
-});
+//   );
+// });
 
-app.intent('USN Entry', async (conv, { usn }) => {
-  conv.ask(
-    new SimpleResponse({
-      text: 'You entered ' + usn + ' , enter your DOB',
-      speech: 'What is your Date of Birth?',
-    })
-  )
+// app.intent('USN Entry', async (conv, { usn }) => {
+//   conv.ask(
+//     new SimpleResponse({
+//       text: 'You entered ' + usn + ' , enter your DOB',
+//       speech: 'What is your Date of Birth?',
+//     })
+//   )
 
-  usnip = usn;
-});
+//   usnip = usn;
+// });
 
 
-path = path + usnip;
+// path = path + usnip;
 
 app.intent('DOB entry', async (conv, { dob }) => {
   conv.ask(
@@ -77,12 +77,12 @@ app.intent('DOB entry', async (conv, { dob }) => {
     }
   
   
-    conv.close(
-      new SimpleResponse({
-        text: 'Here you go',
-        speech: 'Here is your report card',
-      })
-    )
+//     conv.close(
+//       new SimpleResponse({
+//         text: 'Here you go',
+//         speech: 'Here is your report card',
+//       })
+//     )
   
     conv.close(
   
