@@ -9,7 +9,7 @@ const app = dialogflow({ debug: true });
 //iscn
 //const fs = require('fs');
 let path = 'https://sis-scraper-rit-dup-2.herokuapp.com/get_sis_data/';
-let usnip;
+//let usnip;
 let dobip;
 // Capture Intent
 app.intent('Give me my Internals Report', async (conv) => {
@@ -28,8 +28,8 @@ app.intent('Give me my Internals Report', async (conv) => {
 
 
 
-//   );
-// });
+ );
+ });
 
 // app.intent('USN Entry', async (conv, { usn }) => {
 //   conv.ask(
