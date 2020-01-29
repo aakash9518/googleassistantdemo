@@ -68,9 +68,10 @@ app.intent('DOB entry', async (conv, { dob }) => {
 
 
   const axios = require("axios");
-  await axios.get(
+  let res = await axios.get(
     'https://sis-scraper-rit-dup-2.herokuapp.com/get_sis_data/1MS19CS129/2001-03-27'
-  ).then((res: { data:JsonObject})=>{
+  )
+  
     for (var mark in res.data.marks) {
       a1 = a1.concat(res.data.marks[mark].name + " : " + res.data.marks[mark]['final cie'] + "\n");
     }
