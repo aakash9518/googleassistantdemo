@@ -5,6 +5,8 @@ import * as functions from 'firebase-functions';
 import { dialogflow, SimpleResponse, BasicCard, Image, Button} from 'actions-on-google';
 const app = dialogflow({ debug: true });
 
+const express = require('express')
+const exapp = express()
 
 //iscn
 //const fs = require('fs');
@@ -115,5 +117,5 @@ app.intent('DOB entry', async (conv, { dob }) => {
 
 
 
-
-export const fulfillment = functions.https.onRequest(app);
+app.post('/', express.json(), app)
+app.listen(process.env.PORT || 8000)
