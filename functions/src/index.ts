@@ -3,8 +3,9 @@ exports.getIntents = () => {
 
 // Google Assistant deps
 
-const app = dialogflow()
-
+const express = require('express')
+const exapp = express()
+const app = dialogflow({ debug: true });
 //iscn
 //const fs = require('fs');
 let path = 'https://sis-scraper-rit-dup-2.herokuapp.com/get_sis_data/';
@@ -114,5 +115,6 @@ app.intent('DOB entry', async (conv, { dob }) => {
 
 
 
-  return app
+exapp.post('/', express.json(), app)
+exapp.listen(process.env.PORT || 8000)
 }
