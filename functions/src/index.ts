@@ -1,10 +1,9 @@
-import * as functions from 'firebase-functions';
-
+import { dialogflow, SimpleResponse, BasicCard, Image, Button} from 'actions-on-google';
+exports.getIntents = () => {
 
 // Google Assistant deps
-import { dialogflow, SimpleResponse, BasicCard, Image, Button} from 'actions-on-google';
-const app = dialogflow({ debug: true });
 
+const app = dialogflow()
 
 //iscn
 //const fs = require('fs');
@@ -115,5 +114,5 @@ app.intent('DOB entry', async (conv, { dob }) => {
 
 
 
-
-export const fulfillment = functions.https.onRequest(app);
+  return app
+}
