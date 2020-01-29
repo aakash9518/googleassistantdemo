@@ -2,7 +2,7 @@ import * as functions from 'firebase-functions';
 
 
 // Google Assistant deps
-import { dialogflow, SimpleResponse, BasicCard, Image, Button, JsonObject } from 'actions-on-google';
+import { dialogflow, SimpleResponse, BasicCard, Image, Button} from 'actions-on-google';
 const app = dialogflow({ debug: true });
 
 
@@ -112,7 +112,7 @@ app.intent('DOB entry', async (conv, { dob }) => {
   
 
 
-});
+
 
 
 
